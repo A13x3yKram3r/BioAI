@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <style>
+        html 
+        { 
+            scroll-behavior: smooth; 
+        }
+        
+        body 
+        { 
+            background: #0a0f0a; 
+            color: white; 
+            font-family: 'Anonymous Pro', monospace; 
+            text-align: center; 
+            margin: 0; }
+        
+        .header 
+        {
+            padding: 20px; 
+            font-size: 20px; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav
+        {
+            color: white; 
+            text-decoration: none; 
+            margin: 0 10px; 
+            cursor: pointer; 
+            font-size: 24px;
+            opacity: 0.8;
+        }
+        .nav:hover 
+        { 
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        .hero 
+        { 
+            background: #134e24; 
+            padding: 0px 20px; 
+            border-bottom-left-radius: 50% 20px; 
+            border-bottom-right-radius: 50% 20px; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .hero img 
+        { 
+            width: 350px; 
+        }
+
+        .hero p 
+        { 
+            max-width: 1200px; 
+            font-size: 20px; 
+            line-height: 1.5; 
+        }
+
+        .section 
+        {
+            padding: 50px 20px; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+        .circle-container 
+        { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: -50px; 
+            position: relative; 
+        }
+        .circle 
+        { 
+            width: 400px; 
+            height: 400px; 
+            border-radius: 50%; 
+            padding: 40px;
+            background: #002366; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; position: relative; z-index: 2; }
+        
+        
+        .circle img 
+        { 
+            width: 100%; 
+            height: 100%; 
+            border-radius: 50%; 
+            margin: 40px;
+            object-fit: contain;
+        }
+        .small-circle 
+        { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            background: #007a33; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            position: absolute; 
+            right: -30px; 
+            bottom: -30px; 
+            z-index: 0; }
+        .content 
+        { 
+            text-align: left; 
+            max-width: 600px; 
+            margin-left: 20px; 
+        }
+        .btn 
+        { 
+            background: #34a853; 
+            padding: 10px 20px; 
+            border: none; 
+            color: white; 
+            font-size: 18px; 
+            cursor: pointer; 
+            border-radius: 5px; font-family: 'Anonymous Pro', monospace; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#home" class="nav">Главная</a>
+        <a href="#lab" class="nav">Мобильная лаборатория</a>
+        <a href="#filter" class="nav">Фильтр для воздуха</a>
+        <a href="#greenhouse" class="nav">Домашняя теплица</a>
+        <a href="#analyzers" class="nav">Анализаторы</a>
+    </div>
+    
+    <div class="hero" id="home">
+        <img src="Logo.png" alt="BioAI Logo">
+            <p>Проблема с воздухом в Узбекистане, особенно в Ташкенте, заключается в высокой степени загрязненности атмосферного воздуха. Основные причины — это выбросы от транспорта, промышленности, а также использование угля и других ископаемых видов топлива для отопления. В Ташкенте большое количество старых автомобилей с низким уровнем экологических стандартов, что усугубляет ситуацию. Вдобавок, с ухудшением экологии региона, проблемы с качеством воздуха становятся особенно заметными в зимний период, когда температура падает, а уровень загрязнителей в воздухе увеличивается.</p>
+
+    </div>
+    <div class="section" id="lab">
+        <h2>Мобильная лаборатория</h2>
+        <div class="circle-container">
+            <div class="circle"><img src="Cube.JPG" alt="Лаборатория"></div>
+            <div class="content">
+                <p>Описание мобильной лаборатории...</p>
+                <button class="btn">Подробнее</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="filter">
+        <h2>Фильтр для воздуха</h2>
+        <div class="circle-container">
+            <div class="circle"><img src="filter.png" alt="Фильтр"></div>
+            <div class="small-circle">1 500 000 сум</div>
+            <div class="content">
+                <p>Фильтр BioAI это модульный фильтр для воздуха, использующий несколько ступеней очистки воздуха и насыщающий его кислородом при помощи флорариума. Вы можете контролировать работу фильтра и мониторить данные о качестве воздуха на своём телефоне</p>
+                <button class="btn"><a style="color: #FFFFFF; text-decoration: none;" href="https://docs.google.com/forms/d/e/1FAIpQLSdPguQi_IGwYBFht5ZrK5g0JJC-KMY4t4GLQiXI9crWhTAVPQ/viewform">Оформить предзаказ</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="greenhouse">
+        <h2>Домашняя теплица</h2>
+        <div class="circle-container">
+            <div class="circle"><img src="greenhouse.png" alt="Теплица"></div>
+            <div class="small-circle">2 500 000</div>
+            <div class="content">
+                <p>Описание домашней теплицы...</p>
+                <button class="btn"><a style="color: #FFFFFF; text-decoration: none;" href="https://docs.google.com/forms/d/e/1FAIpQLSdPguQi_IGwYBFht5ZrK5g0JJC-KMY4t4GLQiXI9crWhTAVPQ/viewform">Оформить предзаказ</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="analyzers">
+        <h2>Анализаторы</h2>
+        <div class="circle-container">
+            <div class="circle"><img src="analyzer.png" alt="Анализатор"></div>
+            <div class="content">
+                <p>Описание анализатора воздуха...</p>
+                <button class="btn"><a style="color: #FFFFFF; text-decoration: none;" href="https://docs.google.com/forms/d/e/1FAIpQLSdPguQi_IGwYBFht5ZrK5g0JJC-KMY4t4GLQiXI9crWhTAVPQ/viewform">Оформить предзаказ</a></button>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>
